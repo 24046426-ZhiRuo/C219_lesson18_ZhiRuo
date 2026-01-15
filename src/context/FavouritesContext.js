@@ -5,13 +5,16 @@ export const FavouritesContext = createContext();
 function FavouritesProvider({ children }) {
   const [favourites, setFavourites] = useState([]);
 
-  function addFavourite(module) {
-    setFavourites([...favourites, module]);
-  }
+  const addFavourite = (module) => {
+    const exists = favourites.find((item) => item.id === module.id);
+    if (!exists) {
+      setFavourites([...favourites, module]);
+    }
+  };
 
-  function removeFavourite(id) {
-    setFavourites(favourites.filter(m => m.id !== id));
-  }
+  const removeFavourite = (id) => {
+    setFavourites(favourites.filter((item) => item.id !== id));
+  };
 
   return (
     <FavouritesContext.Provider

@@ -5,6 +5,7 @@ body {
   color: #222;
 }
 
+/* Navigation */
 .nav {
   background: white;
   padding: 16px 32px;
@@ -18,54 +19,61 @@ body {
   font-weight: 600;
 }
 
+/* Page container */
 .layout {
   max-width: 1200px;
   margin: auto;
+  padding: 20px;
 }
 
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header section without blue background */
 .hero {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 32px;
-  background: linear-gradient(135deg, #003366, #0055aa);
-  color: white;
-  border-radius: 12px;
-  margin: 20px;
+  padding: 16px 0;
+  background: transparent;
+  margin-bottom: 20px;
 }
 
 .logo {
-  height: 60px;
+  height: 56px;
 }
 
 .hero-text h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
+  color: #003366;
 }
 
 .hero-text p {
-  margin-top: 8px;
-  opacity: 0.9;
+  margin-top: 6px;
+  color: #555;
 }
 
 .hero-img {
-  height: 120px;
-  border-radius: 10px;
+  height: 100px;
+  border-radius: 8px;
   margin-left: auto;
 }
 
-.content {
-  padding: 20px;
-}
-
+/* Search */
 .search {
   width: 100%;
   padding: 12px;
   margin-bottom: 24px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 
+/* Cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -78,7 +86,7 @@ body {
   border-radius: 12px;
   text-decoration: none;
   color: #003366;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
 }
 
@@ -86,6 +94,7 @@ body {
   transform: translateY(-4px);
 }
 
+/* Buttons */
 button.primary {
   background: #003366;
   color: white;
@@ -95,12 +104,12 @@ button.primary {
   cursor: pointer;
 }
 
+/* Registration form */
 .form-page {
   min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f5f7fa;
 }
 
 .form-card {
@@ -152,11 +161,7 @@ button.primary {
   background: #69b5b3;
 }
 
-.success {
-  color: #2e7d32;
-  font-weight: 600;
-}
-
+/* Confirmation message */
 .confirmation h1 {
   font-size: 32px;
   margin-bottom: 16px;
@@ -165,4 +170,67 @@ button.primary {
 .confirmation p {
   font-size: 18px;
   margin-bottom: 12px;
+}
+
+.success {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.hero-img-full {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.page h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.page p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.remove-btn {
+  margin-top: 12px;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #b71c1c;
+}
+
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.faq-item:hover {
+  background: #f5f7fa;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #003366;
+}
+
+.faq-item p {
+  margin-top: 12px;
+  color: #444;
+  line-height: 1.6;
 }

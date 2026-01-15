@@ -6,12 +6,26 @@ function Favourites() {
 
   return (
     <div className="page">
-      <h1>Favourite Courses</h1>
+      <h1>My Favourites</h1>
 
-      {favourites.map(m => (
-        <div key={m.id} className="card">
-          <h3>{m.title}</h3>
-          <button onClick={() => removeFavourite(m.id)}>
+      {favourites.length === 0 && (
+        <p>You have not added any favourite modules yet.</p>
+      )}
+
+      {favourites.map((module) => (
+        <div key={module.id} className="card">
+          <h3>{module.title}</h3>
+
+          {module.diploma && (
+            <p>
+              <strong>Diploma:</strong> {module.diploma}
+            </p>
+          )}
+
+          <button
+            className="remove-btn"
+            onClick={() => removeFavourite(module.id)}
+          >
             Remove
           </button>
         </div>
